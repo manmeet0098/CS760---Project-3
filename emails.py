@@ -10,12 +10,6 @@ data = pd.read_csv('emails.csv')
 X = data.iloc[:,1:-1]
 y = data['Prediction']
 
-# single train/test split
-X_train = X.iloc[:4000, :]
-X_test = X.iloc[4000:, :]
-y_train = y.iloc[:4000]
-y_test = y.iloc[4000:]
-
 
 # initialize 1NN classifier
 knn = KNeighborsClassifier(n_neighbors=1)
